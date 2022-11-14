@@ -1,0 +1,18 @@
+.input-form-todo {
+    border: none;
+    padding: 10px 25px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 4px 1px #002363 inset;
+    border: 2px solid #002363;
+    background-color: #ffffff;
+    outline: none;
+
+    font-weight: 700;
+    font-size: 16px;
+    color: #002363;
+
+    &:focus {
+        box-shadow: 0px 0px 4px 1px #eb0000 inset;
+        border: 2px solid #eb0000;
+    }
+}

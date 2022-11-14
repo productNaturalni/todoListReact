@@ -1,0 +1,85 @@
+.post {
+    width: 80%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 4px 2px #002363 inset;
+    border: 1px solid #002363;
+    border-radius: 5px;
+    background-color: rgb(167, 162, 162);
+    color: #002363;
+
+    .post__content {
+        width: 60%;
+        min-height: 30px;
+        padding: 2px 10px;
+        border: 2px solid #002363;
+        border-radius: 5px;
+        box-shadow: 0px 0px 4px 1px #002363 inset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        text-align: center;
+    }
+
+    .post__box {
+        padding: 5px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        // .post__delete {
+        //     cursor: pointer;
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     background-color: #ffffff;
+        //     width: 30px;
+        //     height: 30px;
+        //     border: 2px solid #002363;
+        //     border-radius: 5px;
+        //     box-shadow: 0px 0px 4px 1px #002363 inset;
+        //     font-weight: 900;
+        //     transition:
+        //         box-shadow 0.2s ease,
+        //         border 0.2s ease,
+        //         color 0.2s ease;
+
+
+        //     &:hover {
+        //         box-shadow: 0px 0px 4px 1px #eb0000 inset;
+        //         border: 2px solid #eb0000;
+        //         color: #eb0000;
+        //     }
+        // }
+
+        .post__create {
+            min-height: 30px;
+            padding: 2px 10px;
+            border: 2px solid #002363;
+            border-radius: 5px;
+            box-shadow: 0px 0px 4px 1px #002363 inset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+
+        :not(:last-child) {
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+.post.show__complited {
+    display: none;
+    transition: opacity 0.25s ease;
+}
+.post.search {
+    display: none;
+    transition: opacity 0.25s ease;
+}
