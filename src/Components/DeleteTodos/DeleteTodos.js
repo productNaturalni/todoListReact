@@ -7,33 +7,31 @@ import { MyButton } from '../MyButtons/ButtonFormTodos/ButtonFormTodos'
 export const DeleteTodos = () => {
     const [state, dispatch] = useContext(Context)
 
-    const methodsDelete = {
-        deleteAllPosts: () => {
-            dispatch({ type: 'DELETE_ALL' })
-        },
+    const handleDeleteAllPosts = () => {
+        dispatch({ type: 'DELETE_ALL' })
+    }
 
-        deleteLastPost: () => {
-            if (state.length) {
-                const newState = [...state]
-                newState.pop()
-    
-                dispatch({
-                    type: 'DELETE_LAST',
-                    list: newState,
-                })
-            }
-        },
+    const handleDeleteLastPost = () => {
+        if (state.length) {
+            const newState = [...state]
+            newState.pop()
+
+            dispatch({
+                type: 'DELETE_LAST',
+                list: newState,
+            })
+        }
     }
 
     return (
         <div className='delete-todos'>
-            <MyButton 
-                handlerClick={methodsDelete.deleteAllPosts} 
-                name='Delete All' 
+            <MyButton
+                handlerClick={handleDeleteAllPosts}
+                name='Delete All'
             />
-            <MyButton 
-                handlerClick={methodsDelete.deleteLastPost} 
-                name='Delete Last' 
+            <MyButton
+                handlerClick={handleDeleteLastPost}
+                name='Delete Last'
             />
         </div>
     )
